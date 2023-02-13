@@ -5,6 +5,7 @@
   * LazyGit
   * LazyNvim
   * VSCode
+  * Firefox
 
 
 # Important aliases for .bashrc
