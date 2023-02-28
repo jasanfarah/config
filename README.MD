@@ -3,10 +3,11 @@
 
   * Guake (Linux)
   * LazyGit
-  * LazyNvim
+  * LazyVim
   * VSCode
   * Firefox
-
+  * GitHub CLI 
+  * i3
 
 # Important aliases for .bashrc
 
