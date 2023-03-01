@@ -1,5 +1,5 @@
 
-# Tools i use daily for development!
+# Tools
 
 OS: Ubuntu
   * Guake - Terminal
