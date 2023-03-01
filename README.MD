@@ -1,17 +1,14 @@
 
 # Tools i use daily for development!
 
-  * Guake (Linux)
-  * LazyGit
-  * LazyVim
-  * VSCode
-  * Firefox
-  * GitHub CLI 
-  * i3
-
-# Important aliases for .bashrc
-
-alias lg='lazygit'
-alias open='nautilus .'
-
-
+OS: Ubuntu
+  * Guake - Terminal
+  * LazyVim - Editor
+  * VSCode - Editor
+  * Firefox - Browser
+  * LazyGit - CLI Tool
+  * GitHub CLI - CLI Tool
+  * i3 - Windows manager
+  * zsh - Unix shell
+  * ohmyzsh - zsh config
+  * Password manager - Bitwarden
