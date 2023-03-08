@@ -1,7 +1,7 @@
 
-# Tools
+# Tools 🛠️
 
-OS: Ubuntu
+### Ubuntu - Operating System
   * Guake - Terminal
   * LazyVim - Editor
   * VSCode - Editor
