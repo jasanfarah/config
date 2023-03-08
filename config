@@ -116,12 +116,12 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:Main"
+set $ws1 "1:Bachelor"
 set $ws2 "2:Code"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5:Discord + Music"
-set $ws6 "6"
+set $ws3 "3:Main/ToDo"
+set $ws4 "4:Reading hub"
+set $ws5 "5:Communication + Music"
+set $ws6 "6:Pomodoro"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -162,14 +162,29 @@ exec setxkbmap dk
 
 # Startup applications - Jasan
 #exec_always firefox
+#exec_always code
 
-
+#Wallpaper
+#exec --no-startup-id feh --bg-scale /config/wallpaper/mistakes.jpeg
 
 
 # Assign applications to workspace - Jasan
-#assign [class="firefox"] 3:Browser
-assign [class="discord"] 5:Discord
+
+assign [class="(?i)code"] $ws2
+
+assign [class="Orange"] $ws5
+assign [class="spotify"] $ws5
+assign [class="discord"] $ws5
+
+
 #assign [class="gitkraken"] 4:Gitkraken
+
+assign [class="pomodoro"] $ws6
+
+
+
+workspace $ws3 output $output3
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -209,6 +224,15 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	
-        status_command i3status
-	position top
+#	status_command i3status
+	position Bottom
+	colors {
+		separator #444444
+		background #222222
+		statusline #B1B1B1
+		focused_workspace #CECECE #CECECE #000000
+		active_workspace #333333 #333333 #888888
+		inactive_workspace #CECECE #333333 #f1f1f1
+		urgent_workspace #eb709b #eb709b #ffffff
+   }
 }
