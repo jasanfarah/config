@@ -1,0 +1,68 @@
+-- Read the docs: https://www.lunarvim.org/docs/configuration
+-- Video Tutorials: https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6
+-- Forum: https://www.reddit.com/r/lunarvim/
+-- Discord: https://discord.com/invite/Xb9B4Ny
+
+
+--run this command
+--cargo install code-minimap
+--
+--
+
+
+
+
+table.insert(lvim.plugins, {
+  "zbirenbaum/copilot-cmp",
+  event = "InsertEnter",
+  dependencies = { "zbirenbaum/copilot.lua" },
+  config = function()
+    vim.defer_fn(function()
+      require("copilot").setup() -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
+      require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
+    end, 100)
+  end,
+})
+table.insert(lvim.plugins, {
+  
+  "wakatime/vim-wakatime",  
+})
+
+table.insert(lvim.plugins,{
+  'wfxr/minimap.vim',
+  build = "cargo install --locked code-minimap",
+  cmd = {"Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight"},
+  config = function ()
+    vim.cmd ("let g:minimap_width = 10")
+    vim.cmd ("let g:minimap_auto_start = 1")
+    vim.cmd ("let g:minimap_auto_start_win_enter = 1")
+  end,
+})
+
+
+
+table.insert(lvim.plugins,{
+'lervag/vimtex'
+})
+
+table.insert(lvim.plugins,{
+  "ggandor/lightspeed.nvim",
+  event = "BufRead",
+}
+)
+
+table.insert(lvim.plugins,{
+
+"shortcuts/no-neck-pain.nvim",
+}
+)
+
+table.insert(lvim.plugins,{
+ "rafamadriz/friendly-snippets", }
+)
+
+table.insert(lvim.plugins,{
+ "manzeloth/live-server", }
+)
+
+
